@@ -1,0 +1,306 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.icon {
+    height: 25vh;
+    width: 25vh;
+    position: absolute;
+    top: 0;
+    background-image: url('img/icon2.png');
+    background-size: cover;
+}
+
+#authContainer {
+    border: 0.3vh solid gray;
+    border-radius: 3vh;
+    width: 30vh;
+    height: 52vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+form {
+    display: flex;
+    height: 47vh;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+input,
+.submit {
+    border: 0.3vh solid gray;
+    height: calc(15 / 100 * 52vh);
+    width: 80%;
+    border-radius: 3vh;
+    margin-top: -1.5vh;
+    font-size: calc(calc(50vh / 20));
+    padding: 0 5%;
+    position: relative;
+}
+
+input:focus {
+    outline: 0.3vh solid #9dc8f4;
+}
+
+.email {
+    margin-top: 8%;
+}
+
+p {
+    height: calc(30vh * 8 / 100);
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: calc(-30vh * 8 / 100);
+    color: rgb(254, 85, 85);
+}
+
+.password {
+    padding-right: calc(5% + 3vh);
+    width: calc(80% - 3vh);
+}
+
+#showPasswordSignup,
+#showPasswordLogin {
+    border-style: hidden;
+    border: none;
+    position: relative;
+    outline: none;
+    left: 11vh;
+    bottom: calc(15 / 100 * 52vh / 1.5);
+    height: calc(0.05 * 1.1 * 52vh);
+    width: calc(0.05 * 1.1 * 52vh);
+    padding: 0;
+}
+
+input:focus {
+    border: 0.3vh solid #1E90FF;
+    transition: all 10s cubic-bezier();
+}
+
+.submit {
+    background-color: #1E90FF;
+    color: white;
+    width: 90%;
+    margin-top: calc(3vh - 11%);
+}
+
+.submit:hover,
+.submit:active,
+.submit:focus {
+    text-decoration: underline;
+    font-style: italic;
+    transition: all 10s cubic-bezier();
+}
+
+#switchBetweenLoginAndSignup {
+    background-color: gray;
+    width: calc(100% + 4px);
+    margin-top: -2px;
+    height: 5vh;
+    border-radius: 3vh 3vh 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#switchBetweenLoginAndSignup button {
+    background-color: transparent;
+    height: 100%;
+    border: none;
+    width: 50%;
+    font-size: calc(calc(50vh / 25));
+    color: white;
+}
+
+#switchBetweenLoginAndSignup button:hover,
+#switchBetweenLoginAndSignup button:active,
+#switchBetweenLoginAndSignup button:focus {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.active {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #9dc8f4 !important;
+}
+
+.inactive {
+    text-decoration: none;
+    color: white !important;
+    font-weight: normal;
+}
+
+
+
+
+/* Cookie-Banner */
+
+#cookieBannerField {
+    width: 100%;
+    height: 24vh;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    padding: 2vh;
+    justify-content: end;
+}
+
+#cookieBanner {
+    width: 30vh;
+    max-width: 96vh;
+    max-height: 20vh;
+    height: min-content;
+    border: 0.3vh solid #1E90FF;
+    border-radius: 2vh;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-right: 2vh;
+    transition: transform 2s ease-in-out;
+    position: relative;
+    left: 37vh;
+}
+
+@media (orientation: landscape) {
+    #cookie-banner {
+        left: initial;
+        right: 0;
+    }
+}
+
+#cookieBannerButtons {
+    width: 100%;
+    height: min-content;
+    position: relative;
+    top: 2vh;
+    margin-bottom: 2vh;
+    align-items: center;
+
+}
+
+#cookieBannerText {
+    width: 100%;
+    height: min-content;
+}
+
+
+#blockCookies {
+    height: 4vh;
+    background-color: transparent;
+    border: 0.3vh solid gray;
+    border-radius: 1vh;
+    width: 15vh;
+    font-size: 1.8vh;
+    color: gray;
+    font-weight: bolder;
+}
+
+#allowCookies {
+    width: 13vh;
+    height: 4vh;
+    background-color: transparent;
+    border: 0.3vh solid #1E90FF;
+    border-radius: 1vh;
+    font-size: 1.8vh;
+    color: black;
+}
+
+#allowCookies:hover,
+#allowCookies:focus,
+#allowCookies:active {
+    border: 0.5vh solid #1E90FF;
+    font-style: italic;
+}
+
+#blockCookies:hover,
+#blockCookies:focus,
+#blockCookies:active {
+    border: 0.5vh solid gray;
+    font-style: italic;
+}
+
+.authServicesContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    height: 10vh;
+    /* background-color: green; */
+    flex-direction: row;
+    padding-bottom: 1vh;
+    position: relative;
+    bottom: 0px;
+}
+
+.contWithAuthServ {
+    position: absolute;
+    bottom: 7vh;
+    font-size: 1.7vh;
+    color: #515151;
+}
+
+.authServicesContainer .google {
+    background-image: url('img/google.png');
+    background-size: cover;
+}
+
+.authServicesContainer .microsoft {
+    background-image: url('img/microsoft.png');
+    background-size: cover;
+    padding: -0.5vh;
+}
+
+.authServicesContainer .apple {
+    background-image: url('img/apple.png');
+    background-size: cover;
+}
+
+.authService {
+    border: 0;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 0;
+    border-radius: 1vh;
+}
+
+#signupWindow,
+#loginWindow {
+    display: flex;
+    height: 47vh;
+    width: 50%;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#authWindow {
+    height: 47vh;
+    width: 200%;
+    display: flex;
+    transition: transform 1s ease-in-out;
+}

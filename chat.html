@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Name angezeigt</title>
+</head>
+
+<body>
+    <script>
+        const state = window.history.state;
+        const uid = state ? state.uid : null;
+        const nameSpan = document.getElementById('uid');
+        if (uid) {
+            console.log(uid);
+        } else {
+            console.log('error');
+            window.location.href='auth.html';
+        }
+    </script>
+</body>
+
+</html>
