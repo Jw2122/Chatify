@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Chatify Register</title>
+    <link rel="stylesheet" href="auth/auth.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="manifest/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="manifest/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="manifest/favicon-16x16.png">
+    <link rel="manifest" href="manifest/site.webmanifest">
+</head>
+
+<body>
+    <div class="icon"></div>
+    <div id="authContainer">
+        <nav id="switchBetweenLoginAndSignup" data-actual="signup">
+            <button id="signUp" class="">Registrieren</button>
+            <button id="logIn" class="">Einloggen</button>
+        </nav>
+        <form id="loginSignupContainer">
+            <div id="authWindow">
+                <div id="signupWindow">
+                    <input type="email" id="signup_email" class="email" placeholder="Email" name="email">
+                    <p id="signup_errorAtEmail" class="errorAtEmail"></p>
+                    <input type="text" id="signup_username" class="username" placeholder="Benutzername" name="username">
+                    <p id="signup_errorAtUsername" class="errorAtUsername"></p>
+                    <div class="passwordContainer"></div>
+                    <input type="password" id="signup_password" class="password" placeholder="Passwort" name="password">
+
+                    <!-- icon to show password -->
+                    <img id="showPasswordSignup" class="showPassword" src="auth/img/show-password.png">
+
+                    <p id="signup_errorAtPassword" class="errorAtPassword"></p>
+                    <button type="fsubmit" id="signup_submit" class="submit">Registrieren</button>
+
+
+                    <div id="signup_authServicesContainer" class="authServicesContainer">
+                        <div id="signup_contWithAuthServ" class="contWithAuthServ">Stattdessen fortfahren mit:</div>
+
+                        <div id="signup_google" class="google authService"></div>
+                        <div id="signup_microsoft" class="microsoft authService"></div>
+                        <div id="signup_apple" class="apple authService"></div>
+                    </div>
+                </div>
+                <div id="loginWindow">
+                    <input type="email" id="login_email" class="email" placeholder="Email" name="email">
+                    <p id="login_errorAtEmail" class="errorAtEmail"></p>
+                    <input type="password" id="login_password" class="password" placeholder="Passwort" name="password">
+
+                    <!-- icon to show password -->
+                    <img id="showPasswordLogin" class="showPassword" src="auth/img/show-password.png">
+
+                    <p id="login_errorAtPassword" class="errorAtPassword"></p>
+                    <button type="fsubmit" id="login_submit" class="submit">Anmelden</button>
+
+
+                    <div id="login_authServicesContainer" class="authServicesContainer">
+                        <div id="login_contWithAuthServ" class="contWithAuthServ">Stattdessen fortfahren mit:</div>
+
+                        <div id="login_google" class="google authService"></div>
+                        <div id="login_microsoft" class="microsoft authService"></div>
+                        <div id="login_apple" class="apple authService"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+
+    </div>
+    <div id="cookieBannerField">
+        <div id="cookieBanner">
+            <div id="cookieBannerText">
+                Diese Webseite verwendet Cookies.
+                Mit Nutzung der Webseite stimmen sie zu, dass diese Webseite Cookies nutzen darf.
+            </div>
+            <div id="cookieBannerButtons">
+                <button id="blockCookies">Nicht Erlauben</button>
+                <button id="allowCookies">Erlauben</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script> -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script> -->
+
+    <!-- Our script must be loaded after firebase references -->
+
+    <script src="auth/auth.js" type="module"></script>
+
+    <!-- script to switch between login and sign up -->
+    <script src="auth/switch.js"></script>
+
+    <!-- script for cookies and cookie-banner -->
+    <script src="auth/cookies.js"></script>
+
+    <script src="auth/style.js"></script>
+
+    <!-- <script src="auth/errors.js"></script> -->
+
+</body>
+
+</html>
