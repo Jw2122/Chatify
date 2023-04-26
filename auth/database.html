@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <button onclick="addText();"></button>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCsiDbCO4jlV97N1blzfo2R2w6LgHowLuY",
+            authDomain: "chatify-1b096.firebaseapp.com",
+            databaseURL: "https://chatify-1b096-default-rtdb.firebaseio.com",
+            projectId: "chatify-1b096",
+            storageBucket: "chatify-1b096.appspot.com",
+            messagingSenderId: "696103072500",
+            appId: "1:696103072500:web:356c8f0bc0b46269ad24a1",
+            measurementId: "G-QXTQLH5H5S"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+
+        function writeUserData(userId, name, email, imageUrl) {
+            email = email.replace(/\./g, "%p%").replace(/@/g, "%a%").replace(/\./g, "%p%");
+            const db = getDatabase();
+            set(ref(db, 'users/' + email), {
+                username: name,
+                email: email,
+                profile_picture: imageUrl
+            });
+        }
+
+
+        writeUserData("1:696103072500", "johannes", "johannes@gmail.com", "http://");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Name angezeigt</title>
+</head>
+
+<body>
+    <h1>Hallo, <span id="name"></span>!</h1>
+    <script>
+        const state = window.history.state;
+        const name = state ? state.name : null;
+        const nameSpan = document.getElementById('name');
+        if (name) {
+            nameSpan.innerText = name;
+        } else {
+            nameSpan.innerText = "Nicht gefunden!";
+        }
+    </script>
+</body>
+
+</html>

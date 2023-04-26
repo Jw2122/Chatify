@@ -1,0 +1,19 @@
+{
+  "name": "chatify",
+  "version": "1.0.0",
+  "description": "best chat ever",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jw2122/chatify.git"
+  },
+  "author": "Johannes Wolf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jw2122/chatify/issues"
+  },
+  "homepage": "https://github.com/jw2122/chatify#readme"
+}
